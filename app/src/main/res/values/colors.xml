@@ -3,4 +3,15 @@
     <color name="colorPrimary">#6200EE</color>
     <color name="colorPrimaryDark">#3700B3</color>
     <color name="colorAccent">#03DAC5</color>
+    <color name="darkestGreen">#02240B</color>
+    <color name="darkGreen">#116426</color>
+    <color name="lightGreen">#14BE3F</color>
+    <color name="white">#FFFFFF</color>
+    <color name="black">#000000</color>
+    <color name="dull_black">#20000000</color>
+    <color name="transparent">#0000</color>
+    <color name="dialog_icon_color">#305A38</color>
+    <color name="gold">#E3F086</color>
+    <color name="collapsed_toolbar_color">#767F3A</color>
+    <color name="red">#FF0000</color>
 </resources>

@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <item
+        android:id="@+id/make_a_video_call"
+        android:icon="@drawable/video_call_white"
+        app:showAsAction="ifRoom"
+        android:title="@string/video_call" />
+    <item
+        android:id="@+id/make_a_phone_call"
+        android:icon="@drawable/phone_white"
+        app:showAsAction="ifRoom"
+        android:title="@string/phone_call"/>
+
+    <item
+        android:id="@+id/view_contact"
+        android:title="@string/view_contact"
+        app:showAsAction="never"/>
+
+    <item
+        android:id="@+id/media_links_and_docs"
+        android:title="@string/media_links_and_docs"
+        app:showAsAction="never"/>
+
+    <item
+        android:id="@+id/search"
+        android:title="@string/search"
+        app:showAsAction="never"/>
+
+    <item
+        android:id="@+id/mute_notifications"
+        android:title="@string/mute_notifications"
+        app:showAsAction="never"/>
+
+    <item
+        android:id="@+id/wallpaper"
+        android:title="@string/wallpaper"
+        app:showAsAction="never"/>
+
+    <item android:title="@string/more"
+        app:showAsAction="never">
+
+        <menu>
+
+            <item
+                android:id="@+id/report"
+                android:title="@string/report"
+                app:showAsAction="never"/>
+
+            <item
+                android:id="@+id/block"
+                android:title="@string/block"
+                app:showAsAction="never"/>
+
+            <item
+                android:id="@+id/clear_chat"
+                android:title="@string/clear_chat"
+                app:showAsAction="never"/>
+
+            <item
+                android:id="@+id/export_chat"
+                android:title="@string/export_chat"
+                app:showAsAction="never"/>
+
+            <item
+                android:id="@+id/add_shortcut"
+                android:title="@string/add_shortcut"
+                app:showAsAction="never"/>
+
+        </menu>
+
+    </item>
+
+</menu>

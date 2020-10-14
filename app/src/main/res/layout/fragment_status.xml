@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    tools:context=".ui.StatusFragment">
+
+    <FrameLayout
+        android:id="@+id/addStatusContainer"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        style="@style/RippleEffectStyle"
+        android:padding="8dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/dpContainer"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="16dp">
+
+            <de.hdodenhof.circleimageview.CircleImageView
+                android:id="@+id/myDp"
+                android:layout_width="52dp"
+                android:layout_height="52dp"
+                android:src="@drawable/placeholder"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintStart_toStartOf="parent"/>
+
+            <ImageView
+                android:id="@+id/addSign"
+                android:layout_width="20dp"
+                android:layout_height="20dp"
+                android:src="@drawable/add_sign"
+                android:background="@drawable/circular_image_green"
+                app:layout_constraintEnd_toEndOf="@+id/myDp"
+                app:layout_constraintBottom_toBottomOf="@+id/myDp"/>
+
+            <TextView
+                android:id="@+id/myStatus"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/my_status"
+                android:textSize="20sp"
+                android:layout_marginStart="16dp"
+                android:textColor="@color/black"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintStart_toEndOf="@+id/myDp"/>
+
+            <TextView
+                android:id="@+id/statusUpdate"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/tap_to_add_status_update"
+                android:textColor="@color/darkGreen"
+                android:textSize="15sp"
+                android:layout_marginStart="16dp"
+                app:layout_constraintTop_toBottomOf="@+id/myStatus"
+                app:layout_constraintStart_toEndOf="@+id/myDp"/>
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </FrameLayout>
+
+    <View
+        android:id="@+id/line1"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/addStatusContainer"/>
+
+    <TextView
+        android:id="@+id/viewUpdates"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/viewed_updates"
+        android:textColor="@color/darkGreen"
+        android:padding="8dp"
+        android:background="@color/dull_black"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/line1"/>
+
+    <View
+        android:id="@+id/line2"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/viewUpdates"/>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

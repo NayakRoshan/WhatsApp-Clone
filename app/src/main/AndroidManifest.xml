@@ -9,7 +9,15 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".MainActivity">
+        <activity android:name=".ui.UserProfileActivity"
+            android:theme="@style/NoActionBarMainTheme"
+            android:parentActivityName=".ui.ChatActivity"/>
+        <activity
+            android:name=".ui.ChatActivity"
+            android:theme="@style/NoActionBarMainTheme"
+            android:windowSoftInputMode="stateVisible|adjustResize"/>
+        <activity android:name=".ui.MainScreen"
+            android:theme="@style/NoActionBarMainTheme">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
