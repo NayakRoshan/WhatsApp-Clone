@@ -9,7 +9,7 @@
     android:layout_height="wrap_content">
 
     <de.hdodenhof.circleimageview.CircleImageView
-        android:id="@+id/callerDp"
+        android:id="@+id/civCallerDp"
         android:layout_width="52dp"
         android:layout_height="52dp"
         android:src="@drawable/placeholder"
@@ -19,7 +19,7 @@
         app:layout_constraintTop_toTopOf="parent"/>
 
     <TextView
-        android:id="@+id/name"
+        android:id="@+id/tvName"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="@string/name_caller"
@@ -27,28 +27,28 @@
         android:textColor="@color/black"
         android:layout_margin="8dp"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintStart_toEndOf="@+id/callerDp"/>
+        app:layout_constraintStart_toEndOf="@+id/civCallerDp"/>
 
     <ImageView
-        android:id="@+id/denote"
+        android:id="@+id/ivDenote"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:src="@drawable/call_received"
         android:layout_marginStart="8dp"
-        app:layout_constraintTop_toBottomOf="@+id/name"
-        app:layout_constraintStart_toEndOf="@+id/callerDp"/>
+        app:layout_constraintTop_toBottomOf="@+id/tvName"
+        app:layout_constraintStart_toEndOf="@+id/civCallerDp"/>
 
     <TextView
-        android:id="@+id/callTime"
+        android:id="@+id/tvCallTime"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="@string/time_of_call"
         android:layout_marginStart="4dp"
-        app:layout_constraintStart_toEndOf="@+id/denote"
-        app:layout_constraintTop_toBottomOf="@+id/name"/>
+        app:layout_constraintStart_toEndOf="@+id/ivDenote"
+        app:layout_constraintTop_toBottomOf="@+id/tvName"/>
 
     <ImageView
-        android:id="@+id/mode"
+        android:id="@+id/ivMode"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:src="@drawable/phone"
@@ -67,6 +67,6 @@
         android:layout_marginEnd="8dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toEndOf="@+id/callerDp"/>
+        app:layout_constraintStart_toEndOf="@+id/civCallerDp"/>
 
 </androidx.constraintlayout.widget.ConstraintLayout>

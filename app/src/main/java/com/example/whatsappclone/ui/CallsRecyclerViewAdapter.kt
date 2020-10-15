@@ -19,10 +19,10 @@ class CallsRecyclerViewAdapter(
 ) : RecyclerView.Adapter<CallsRecyclerViewAdapter.ViewHolder>() {
 
     class ViewHolder(itemView : View) : RecyclerView.ViewHolder(itemView) {
-        val name : TextView = itemView.name
-        val calledBy : ImageView = itemView.denote
-        val time : TextView = itemView.callTime
-        val mode : ImageView = itemView.mode
+        val name : TextView = itemView.tvName
+        val calledBy : ImageView = itemView.ivDenote
+        val time : TextView = itemView.tvCallTime
+        val mode : ImageView = itemView.ivMode
     }
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): ViewHolder {

@@ -6,7 +6,7 @@
     android:layout_height="wrap_content">
 
     <ImageView
-        android:id="@+id/dp"
+        android:id="@+id/ivDp"
         android:layout_width="250dp"
         android:layout_height="0dp"
         android:src="@drawable/placeholder"
@@ -15,38 +15,38 @@
         app:layout_constraintEnd_toEndOf="parent"/>
 
     <ImageView
-        android:id="@+id/message"
+        android:id="@+id/ivMessage"
         style="@style/DialogIconsStyle"
         android:src="@drawable/message"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/dp"
-        app:layout_constraintEnd_toStartOf="@+id/phone"
+        app:layout_constraintTop_toBottomOf="@id/ivDp"
+        app:layout_constraintEnd_toStartOf="@+id/ivPhone"
         app:layout_constraintBottom_toBottomOf="parent"/>
 
     <ImageView
-        android:id="@+id/phone"
+        android:id="@+id/ivPhone"
         style="@style/DialogIconsStyle"
         android:src="@drawable/phone"
-        app:layout_constraintStart_toEndOf="@+id/message"
-        app:layout_constraintTop_toBottomOf="@+id/dp"
-        app:layout_constraintEnd_toStartOf="@+id/videoCall"
+        app:layout_constraintStart_toEndOf="@+id/ivMessage"
+        app:layout_constraintTop_toBottomOf="@+id/ivDp"
+        app:layout_constraintEnd_toStartOf="@+id/ivVideoCall"
         app:layout_constraintBottom_toBottomOf="parent"/>
 
     <ImageView
-        android:id="@+id/videoCall"
+        android:id="@+id/ivVideoCall"
         style="@style/DialogIconsStyle"
         android:src="@drawable/video_call"
-        app:layout_constraintStart_toEndOf="@+id/phone"
-        app:layout_constraintTop_toBottomOf="@+id/dp"
-        app:layout_constraintEnd_toStartOf="@+id/info"
+        app:layout_constraintStart_toEndOf="@+id/ivPhone"
+        app:layout_constraintTop_toBottomOf="@+id/ivDp"
+        app:layout_constraintEnd_toStartOf="@+id/ivInfo"
         app:layout_constraintBottom_toBottomOf="parent"/>
 
     <ImageView
-        android:id="@+id/info"
+        android:id="@+id/ivInfo"
         style="@style/DialogIconsStyle"
         android:src="@drawable/info"
-        app:layout_constraintStart_toEndOf="@+id/videoCall"
-        app:layout_constraintTop_toBottomOf="@+id/dp"
+        app:layout_constraintStart_toEndOf="@+id/ivVideoCall"
+        app:layout_constraintTop_toBottomOf="@+id/ivDp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintBottom_toBottomOf="parent"/>
 

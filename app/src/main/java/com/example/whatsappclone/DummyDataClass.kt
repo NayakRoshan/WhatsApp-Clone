@@ -76,12 +76,14 @@ object DummyDataClass {
 
     fun getImageIds() : ArrayList<Int> {
         val imageIds = ArrayList<Int>()
-        imageIds.add(R.drawable.bridge)
-        imageIds.add(R.drawable.moon)
-        imageIds.add(R.drawable.person)
-        imageIds.add(R.drawable.placeholder)
-        imageIds.add(R.drawable.scenary)
-        imageIds.add(R.drawable.more)
+        imageIds.apply {
+            add(R.drawable.bridge)
+            add(R.drawable.moon)
+            add(R.drawable.person)
+            add(R.drawable.placeholder)
+            add(R.drawable.scenary)
+            add(R.drawable.more)
+        }
         return imageIds
     }
 

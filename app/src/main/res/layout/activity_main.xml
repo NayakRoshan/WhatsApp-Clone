@@ -7,7 +7,7 @@
     tools:context=".ui.MainScreen">
 
     <com.google.android.material.appbar.AppBarLayout
-        android:id="@+id/appBar"
+        android:id="@+id/abMainBar"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         app:layout_constraintTop_toTopOf="parent"
@@ -15,7 +15,7 @@
         app:layout_constraintEnd_toEndOf="parent">
 
         <androidx.appcompat.widget.Toolbar
-            android:id="@+id/toolBar"
+            android:id="@+id/tbNavBar"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             app:title="WhatsApp"
@@ -32,20 +32,20 @@
             android:background="@color/darkGreen"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@id/toolBar">
+            app:layout_constraintTop_toBottomOf="@id/tbNavBar">
 
             <com.google.android.material.tabs.TabItem
-                android:id="@+id/chats"
+                android:id="@+id/tiChats"
                 style="@style/TabItemsStyle"
                 android:text="@string/chats" />
 
             <com.google.android.material.tabs.TabItem
-                android:id="@+id/status"
+                android:id="@+id/tiStatus"
                 style="@style/TabItemsStyle"
                 android:text="@string/status"/>
 
             <com.google.android.material.tabs.TabItem
-                android:id="@+id/calls"
+                android:id="@+id/tiCalls"
                 style="@style/TabItemsStyle"
                 android:text="@string/calls"/>
 
@@ -54,12 +54,12 @@
     </com.google.android.material.appbar.AppBarLayout>
 
     <androidx.viewpager.widget.ViewPager
-        android:id="@+id/fragmentHolderPager"
+        android:id="@+id/vpFragmentHolder"
         android:layout_width="match_parent"
         android:layout_height="0dp"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/appBar"
+        app:layout_constraintTop_toBottomOf="@+id/abMainBar"
         app:layout_constraintBottom_toBottomOf="parent"/>
 
     <com.google.android.material.floatingactionbutton.FloatingActionButton

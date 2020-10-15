@@ -18,8 +18,8 @@ class UserChatsRecyclerViewAdapter(
     private var count = 0
 
     class ViewHolder(itemView : View) : RecyclerView.ViewHolder(itemView) {
-        val message: TextView = itemView.message
-        val time: TextView = itemView.time
+        val message: TextView = itemView.tvMessage
+        val time: TextView = itemView.tvTime
     }
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): ViewHolder {

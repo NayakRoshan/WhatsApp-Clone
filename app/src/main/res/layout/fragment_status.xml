@@ -8,7 +8,7 @@
     tools:context=".ui.StatusFragment">
 
     <FrameLayout
-        android:id="@+id/addStatusContainer"
+        android:id="@+id/flAddStatusContainer"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         style="@style/RippleEffectStyle"
@@ -24,7 +24,7 @@
             android:layout_margin="16dp">
 
             <de.hdodenhof.circleimageview.CircleImageView
-                android:id="@+id/myDp"
+                android:id="@+id/civMyDp"
                 android:layout_width="52dp"
                 android:layout_height="52dp"
                 android:src="@drawable/placeholder"
@@ -32,16 +32,16 @@
                 app:layout_constraintStart_toStartOf="parent"/>
 
             <ImageView
-                android:id="@+id/addSign"
+                android:id="@+id/ivAddSign"
                 android:layout_width="20dp"
                 android:layout_height="20dp"
                 android:src="@drawable/add_sign"
                 android:background="@drawable/circular_image_green"
-                app:layout_constraintEnd_toEndOf="@+id/myDp"
-                app:layout_constraintBottom_toBottomOf="@+id/myDp"/>
+                app:layout_constraintEnd_toEndOf="@+id/civMyDp"
+                app:layout_constraintBottom_toBottomOf="@+id/civMyDp"/>
 
             <TextView
-                android:id="@+id/myStatus"
+                android:id="@+id/tvStatus"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="@string/my_status"
@@ -49,18 +49,18 @@
                 android:layout_marginStart="16dp"
                 android:textColor="@color/black"
                 app:layout_constraintTop_toTopOf="parent"
-                app:layout_constraintStart_toEndOf="@+id/myDp"/>
+                app:layout_constraintStart_toEndOf="@+id/civMyDp"/>
 
             <TextView
-                android:id="@+id/statusUpdate"
+                android:id="@+id/tvStatusUpdate"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="@string/tap_to_add_status_update"
                 android:textColor="@color/darkGreen"
                 android:textSize="15sp"
                 android:layout_marginStart="16dp"
-                app:layout_constraintTop_toBottomOf="@+id/myStatus"
-                app:layout_constraintStart_toEndOf="@+id/myDp"/>
+                app:layout_constraintTop_toBottomOf="@+id/tvStatus"
+                app:layout_constraintStart_toEndOf="@+id/civMyDp"/>
 
         </androidx.constraintlayout.widget.ConstraintLayout>
 
@@ -72,10 +72,10 @@
         android:layout_height="1dp"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/addStatusContainer"/>
+        app:layout_constraintTop_toBottomOf="@id/flAddStatusContainer"/>
 
     <TextView
-        android:id="@+id/viewUpdates"
+        android:id="@+id/tvViewUpdates"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:text="@string/viewed_updates"
@@ -92,6 +92,6 @@
         android:layout_height="1dp"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/viewUpdates"/>
+        app:layout_constraintTop_toBottomOf="@id/tvViewUpdates"/>
 
 </androidx.constraintlayout.widget.ConstraintLayout>

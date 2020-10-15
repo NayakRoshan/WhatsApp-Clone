@@ -39,9 +39,9 @@ class MainScreen : AppCompatActivity() {
         pageTitles.add(resources.getString(R.string.calls))
 
         val adapter = ViewPagerAdapter(supportFragmentManager, fragmentList, pageTitles)
-        fragmentHolderPager.adapter = adapter
-        navButtons.setupWithViewPager(fragmentHolderPager)
-        fragmentHolderPager.addOnPageChangeListener(onPageChangeListener)
+        vpFragmentHolder.adapter = adapter
+        navButtons.setupWithViewPager(vpFragmentHolder)
+        vpFragmentHolder.addOnPageChangeListener(onPageChangeListener)
     }
 
     private val onPageChangeListener = object : ViewPager.OnPageChangeListener {

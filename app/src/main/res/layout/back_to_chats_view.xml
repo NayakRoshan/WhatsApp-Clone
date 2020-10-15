@@ -6,7 +6,7 @@
     android:layout_height="wrap_content">
 
     <ImageView
-        android:id="@+id/arrow_back"
+        android:id="@+id/ivArrowBack"
         android:layout_width="32dp"
         android:layout_height="32dp"
         android:src="@drawable/arrow_back"
@@ -17,13 +17,13 @@
         android:contentDescription="@string/go_back_to_chats_activity" />
 
     <de.hdodenhof.circleimageview.CircleImageView
-        android:id="@+id/dp_back"
+        android:id="@+id/ivDpBack"
         android:layout_width="32dp"
         android:layout_height="32dp"
         android:src="@drawable/placeholder"
         android:background="@color/darkGreen"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintStart_toEndOf="@+id/arrow_back"
+        app:layout_constraintStart_toEndOf="@+id/ivArrowBack"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintBottom_toBottomOf="parent"/>
 

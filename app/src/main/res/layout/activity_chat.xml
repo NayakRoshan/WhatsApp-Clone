@@ -9,7 +9,7 @@
     tools:context=".ui.ChatActivity">
 
     <com.google.android.material.appbar.AppBarLayout
-        android:id="@+id/appBar"
+        android:id="@+id/abChatAct"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         app:layout_constraintStart_toStartOf="parent"
@@ -17,7 +17,7 @@
         app:layout_constraintTop_toTopOf="parent">
 
         <androidx.appcompat.widget.Toolbar
-            android:id="@+id/chatToolBar"
+            android:id="@+id/tbChatAct"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:background="@color/darkGreen"
@@ -29,7 +29,7 @@
                 layout="@layout/back_to_chats_view"/>
 
             <TextView
-                android:id="@+id/actTitle"
+                android:id="@+id/tvActTitle"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:maxLines="1"
@@ -46,24 +46,24 @@
     </com.google.android.material.appbar.AppBarLayout>
 
     <androidx.recyclerview.widget.RecyclerView
-        android:id="@+id/messageList"
+        android:id="@+id/rvMessageList"
         android:layout_width="match_parent"
         android:layout_height="0dp"
         android:layout_margin="8dp"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/appBar"
+        app:layout_constraintTop_toBottomOf="@+id/abChatAct"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintBottom_toTopOf="@+id/cardView"/>
+        app:layout_constraintBottom_toTopOf="@+id/cvUserInputLayout"/>
 
     <androidx.cardview.widget.CardView
-    android:id="@+id/cardView"
+    android:id="@+id/cvUserInputLayout"
     android:layout_width="0dp"
     android:layout_height="wrap_content"
     app:cardCornerRadius="40dp"
     android:layout_margin="8dp"
         android:clipChildren="false"
         android:clipToPadding="false"
-    app:layout_constraintEnd_toStartOf="@id/micImage"
+    app:layout_constraintEnd_toStartOf="@id/civMicImage"
     app:layout_constraintStart_toStartOf="parent"
     app:layout_constraintBottom_toBottomOf="parent">
 
@@ -81,7 +81,7 @@
             android:layout_margin="8dp"/>
 
         <EditText
-            android:id="@+id/enterMessage"
+            android:id="@+id/etEnterMessage"
             android:layout_width="0dp"
             android:layout_weight="1"
             android:layout_height="match_parent"
@@ -91,14 +91,14 @@
             android:hint="@string/type_a_message"/>
 
         <ImageView
-            android:id="@+id/selectImage"
+            android:id="@+id/ivSelectImage"
             android:layout_width="40dp"
             android:layout_height="40dp"
             android:src="@drawable/image"
             android:layout_margin="8dp"/>
 
         <ImageView
-            android:id="@+id/clickImage"
+            android:id="@+id/ivClickImage"
             android:layout_width="40dp"
             android:layout_height="40dp"
             android:src="@drawable/ic_baseline_camera_alt_24"
@@ -109,7 +109,7 @@
     </androidx.cardview.widget.CardView>
 
     <de.hdodenhof.circleimageview.CircleImageView
-    android:id="@+id/micImage"
+    android:id="@+id/civMicImage"
     android:layout_width="50dp"
     android:layout_height="50dp"
     android:layout_margin="8dp"
@@ -118,67 +118,7 @@
     android:background="@drawable/circular_image"
     app:layout_constraintHorizontal_chainStyle="packed"
     app:layout_constraintEnd_toEndOf="parent"
-    app:layout_constraintStart_toEndOf="@+id/cardView"
+    app:layout_constraintStart_toEndOf="@+id/cvUserInputLayout"
     app:layout_constraintBottom_toBottomOf="parent"/>
 
 </androidx.constraintlayout.widget.ConstraintLayout>
-
-<!--<androidx.cardview.widget.CardView-->
-<!--android:id="@+id/cardView"-->
-<!--android:layout_width="0dp"-->
-<!--android:layout_height="wrap_content"-->
-<!--app:cardCornerRadius="40dp"-->
-<!--android:layout_margin="8dp"-->
-<!--app:layout_constraintEnd_toStartOf="@id/micImage"-->
-<!--app:layout_constraintStart_toStartOf="parent"-->
-<!--app:layout_constraintBottom_toBottomOf="parent">-->
-
-<!--<LinearLayout-->
-<!--    android:layout_width="match_parent"-->
-<!--    android:layout_height="match_parent"-->
-<!--    android:orientation="horizontal">-->
-
-<!--    <ImageView-->
-<!--        android:layout_width="40dp"-->
-<!--        android:layout_height="40dp"-->
-<!--        android:src="@drawable/smiley"-->
-<!--        android:layout_margin="8dp"/>-->
-
-<!--    <EditText-->
-<!--        android:id="@+id/enterMessage"-->
-<!--        android:layout_width="0dp"-->
-<!--        android:layout_weight="1"-->
-<!--        android:layout_height="match_parent"-->
-<!--        android:maxLines="4"-->
-<!--        android:background="@color/transparent"-->
-<!--        android:textColor="@color/black"-->
-<!--        android:hint="@string/type_a_message"/>-->
-
-<!--    <ImageView-->
-<!--        android:layout_width="40dp"-->
-<!--        android:layout_height="40dp"-->
-<!--        android:src="@drawable/image"-->
-<!--        android:layout_margin="8dp"/>-->
-
-<!--    <ImageView-->
-<!--        android:layout_width="40dp"-->
-<!--        android:layout_height="40dp"-->
-<!--        android:src="@drawable/ic_baseline_camera_alt_24"-->
-<!--        android:layout_margin="8dp"/>-->
-
-<!--</LinearLayout>-->
-
-<!--</androidx.cardview.widget.CardView>-->
-
-<!--<de.hdodenhof.circleimageview.CircleImageView-->
-<!--android:id="@+id/micImage"-->
-<!--android:layout_width="50dp"-->
-<!--android:layout_height="50dp"-->
-<!--android:layout_margin="8dp"-->
-<!--android:padding="8dp"-->
-<!--android:src="@drawable/mic"-->
-<!--android:background="@color/lightGreen"-->
-<!--app:layout_constraintHorizontal_chainStyle="packed"-->
-<!--app:layout_constraintEnd_toEndOf="parent"-->
-<!--app:layout_constraintStart_toEndOf="@+id/cardView"-->
-<!--app:layout_constraintBottom_toBottomOf="parent"/>-->

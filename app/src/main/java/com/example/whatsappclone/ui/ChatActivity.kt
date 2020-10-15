@@ -31,7 +31,7 @@ class ChatActivity : AppCompatActivity() {
     }
 
     private fun setUpUi() {
-        actTitle.text = intent.getStringExtra(USER_NAME_CLICKED)
+        tvActTitle.text = intent.getStringExtra(USER_NAME_CLICKED)
     }
 
     private fun setReturnToChatsActivityClick() {
@@ -42,13 +42,13 @@ class ChatActivity : AppCompatActivity() {
 
     private fun loadPreviousChats() {
         val linearLayout = LinearLayoutManager(this)
-        messageList.layoutManager = linearLayout
+        rvMessageList.layoutManager = linearLayout
         val adapter = UserChatsRecyclerViewAdapter(this, DummyDataClass.getMessagesDummyData())
-        messageList.adapter = adapter
+        rvMessageList.adapter = adapter
     }
 
     private fun setTitleClickListener() {
-        actTitle.setOnClickListener {
+        tvActTitle.setOnClickListener {
             val viewUserProfileIntent = Intent(this@ChatActivity, UserProfileActivity::class.java)
             viewUserProfileIntent.putExtra(USER_NAME_CLICKED, intent.getStringExtra(USER_NAME_CLICKED))
             startActivity(viewUserProfileIntent)
@@ -56,7 +56,7 @@ class ChatActivity : AppCompatActivity() {
     }
 
     private fun setFirstCharacterEnteredListener() {
-        enterMessage.addTextChangedListener(object : TextWatcher{
+        etEnterMessage.addTextChangedListener(object : TextWatcher{
             override fun afterTextChanged(s: Editable?) {
 
             }
@@ -66,7 +66,7 @@ class ChatActivity : AppCompatActivity() {
             }
 
             override fun onTextChanged(s: CharSequence?, start: Int, before: Int, count: Int) {
-                if (translateBy == null) translateBy = clickImage.right.toFloat() - selectImage.right.toFloat()
+                if (translateBy == null) translateBy = ivClickImage.right.toFloat() - ivSelectImage.right.toFloat()
                 if ((before == 0) and (count > 0)) {
                     animateObject(translateBy as Float)
                     changeIcon(R.drawable.send)
@@ -83,17 +83,17 @@ class ChatActivity : AppCompatActivity() {
         val translate : Float = if (translateBy < 0) 0f
         else translateBy
 
-        if (translate == 0f) clickImage.visibility = View.VISIBLE
+        if (translate == 0f) ivClickImage.visibility = View.VISIBLE
         val animatorSet = AnimatorSet()
         animatorSet.playTogether(
-            ObjectAnimator.ofFloat(selectImage, View.TRANSLATION_X, translate),
-            ObjectAnimator.ofFloat(clickImage, View.TRANSLATION_X, translate)
+            ObjectAnimator.ofFloat(ivSelectImage, View.TRANSLATION_X, translate),
+            ObjectAnimator.ofFloat(ivClickImage, View.TRANSLATION_X, translate)
         )
         animatorSet.duration = 200
         animatorSet.addListener(object : Animator.AnimatorListener {
             override fun onAnimationRepeat(p0: Animator?) {}
             override fun onAnimationEnd(p0: Animator?) {
-                if (translate > 0) clickImage.visibility = View.INVISIBLE
+                if (translate > 0) ivClickImage.visibility = View.INVISIBLE
             }
             override fun onAnimationCancel(p0: Animator?) {}
             override fun onAnimationStart(p0: Animator?) {}
@@ -102,10 +102,10 @@ class ChatActivity : AppCompatActivity() {
     }
 
     private fun changeIcon(imageId : Int) {
-        val fadeOut = ObjectAnimator.ofFloat(micImage, View.ALPHA, 1f, 0f)
-        val fadeIn = ObjectAnimator.ofFloat(micImage, View.ALPHA, 0f, 1f)
+        val fadeOut = ObjectAnimator.ofFloat(civMicImage, View.ALPHA, 1f, 0f)
+        val fadeIn = ObjectAnimator.ofFloat(civMicImage, View.ALPHA, 0f, 1f)
         fadeOut.start()
-        micImage.setImageDrawable(ResourcesCompat.getDrawable(resources, imageId, resources.newTheme()))
+        civMicImage.setImageDrawable(ResourcesCompat.getDrawable(resources, imageId, resources.newTheme()))
         fadeIn.start()
     }
 }

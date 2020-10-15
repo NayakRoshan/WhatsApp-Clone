@@ -17,7 +17,7 @@ class SharedImagesRecyclerViewAdapter(
 ) : RecyclerView.Adapter<SharedImagesRecyclerViewAdapter.ViewHolder>() {
 
     class ViewHolder(itemView : View) : RecyclerView.ViewHolder(itemView) {
-        val sharedImage: ImageView = itemView.sharedImage
+        val sharedImage: ImageView = itemView.ivSharedImage
     }
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): ViewHolder {

@@ -10,7 +10,7 @@
     android:layout_height="wrap_content">
 
     <de.hdodenhof.circleimageview.CircleImageView
-        android:id="@+id/displayPicture"
+        android:id="@+id/civDisplayPicture"
         android:layout_width="52dp"
         android:layout_height="52dp"
         android:layout_marginStart="16dp"
@@ -23,7 +23,7 @@
         app:layout_constraintBottom_toBottomOf="parent"/>
 
     <TextView
-        android:id="@+id/userName"
+        android:id="@+id/tvUserName"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:textColor="@color/black"
@@ -36,7 +36,7 @@
         app:layout_constraintStart_toEndOf="@+id/displayPicture"/>
 
     <TextView
-        android:id="@+id/latestMessage"
+        android:id="@+id/tvLatestMessage"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginStart="16dp"
@@ -44,7 +44,7 @@
         android:layout_marginEnd="16dp"
         android:ellipsize="end"
         app:layout_constraintStart_toEndOf="@+id/displayPicture"
-        app:layout_constraintTop_toBottomOf="@+id/userName"
+        app:layout_constraintTop_toBottomOf="@+id/tvUserName"
         app:layout_constraintEnd_toEndOf="parent"
         android:singleLine="true" />
 
@@ -55,8 +55,8 @@
         android:layout_marginTop="8dp"
         android:background="#B4C1B6"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="@id/latestMessage"
-        app:layout_constraintStart_toStartOf="@+id/latestMessage"
+        app:layout_constraintEnd_toEndOf="@id/tvLatestMessage"
+        app:layout_constraintStart_toStartOf="@+id/tvLatestMessage"
         app:layout_constraintTop_toBottomOf="@+id/displayPicture" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

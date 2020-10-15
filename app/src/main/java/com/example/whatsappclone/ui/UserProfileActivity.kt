@@ -23,14 +23,14 @@ class UserProfileActivity : AppCompatActivity() {
     }
 
     private fun setFadeProfileImage() {
-        profileAppBar.addOnOffsetChangedListener(AppBarLayout.OnOffsetChangedListener { appBarLayout, verticalOffset ->
+        abProfile.addOnOffsetChangedListener(AppBarLayout.OnOffsetChangedListener { appBarLayout, verticalOffset ->
             val range = (-appBarLayout.totalScrollRange).toFloat()
-            profileImage.imageAlpha = (255 * (1.0f - verticalOffset.toFloat() / range)).toInt()
+            ivProfileImage.imageAlpha = (255 * (1.0f - verticalOffset.toFloat() / range)).toInt()
         })
     }
 
     private fun setAppBar() {
-        setSupportActionBar(profileToolBar)
+        setSupportActionBar(tbProfile)
         supportActionBar?.setDisplayHomeAsUpEnabled(true)
         supportActionBar?.title = intent.getStringExtra(USER_NAME_CLICKED)
     }
@@ -38,8 +38,8 @@ class UserProfileActivity : AppCompatActivity() {
     private fun setSharedDocList() {
         val linearLayoutManager = LinearLayoutManager(this, LinearLayoutManager.HORIZONTAL, false)
         val adapter = SharedImagesRecyclerViewAdapter(this, DummyDataClass.getImageIds())
-        sharedItems.layoutManager = linearLayoutManager
-        sharedItems.adapter = adapter
+        rvSharedItems.layoutManager = linearLayoutManager
+        rvSharedItems.adapter = adapter
     }
 
     override fun onCreateOptionsMenu(menu: Menu?): Boolean {

@@ -29,8 +29,8 @@ class CallsFragment : Fragment() {
             context!!,
             DummyDataClass.getCallsDummyData()
         )
-        callsList.layoutManager = linearLayoutManager
-        callsList.adapter = adapter
+        rvCallsList.layoutManager = linearLayoutManager
+        rvCallsList.adapter = adapter
     }
 
 }

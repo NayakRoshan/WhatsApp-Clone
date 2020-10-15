@@ -9,10 +9,11 @@ import androidx.fragment.app.Fragment
 import androidx.recyclerview.widget.LinearLayoutManager
 import com.example.whatsappclone.DummyDataClass
 import com.example.whatsappclone.R
+import com.example.whatsappclone.callback.OnUserClickedListener
 import kotlinx.android.synthetic.main.fragment_chats.*
 
 class ChatsFragment : Fragment(),
-    ChatsRecyclerViewAdapter.ItemViewClickListener {
+    OnUserClickedListener {
 
     private val USER_NAME_CLICKED = "Name Clicked"
 
@@ -30,11 +31,11 @@ class ChatsFragment : Fragment(),
     private fun setUpRecyclerView() {
         val dummyData = DummyDataClass.getChatsDummyData()
         val adapter = ChatsRecyclerViewAdapter(context!!, this, fragmentManager!!, dummyData)
-        myChatsList.layoutManager = LinearLayoutManager(activity)
-        myChatsList.adapter = adapter
+        rvChatsList.layoutManager = LinearLayoutManager(activity)
+        rvChatsList.adapter = adapter
     }
 
-    override fun onItemViewClickListener(nameClicked : String) {
+    override fun onUserClickListener(nameClicked : String) {
         val callChatActivity = Intent(activity, ChatActivity::class.java)
         callChatActivity.putExtra(USER_NAME_CLICKED, nameClicked)
         startActivity(callChatActivity)

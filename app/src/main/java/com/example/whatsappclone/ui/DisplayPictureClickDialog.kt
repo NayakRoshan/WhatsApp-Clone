@@ -23,6 +23,6 @@ class DisplayPictureClickDialog() : DialogFragment() {
     }
 
     private fun setUpUi() {
-        dp.setImageDrawable(ResourcesCompat.getDrawable(resources, R.drawable.placeholder, resources.newTheme()))
+        ivDp.setImageDrawable(ResourcesCompat.getDrawable(resources, R.drawable.placeholder, resources.newTheme()))
     }
 }

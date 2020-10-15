@@ -13,11 +13,11 @@
         app:layout_constraintBottom_toBottomOf="parent">
 
         <TextView
-            android:id="@+id/message"
+            android:id="@+id/tvMessage"
             style="@style/MessageTextStyle" />
 
         <TextView
-            android:id="@+id/time"
+            android:id="@+id/tvTime"
             style="@style/MessageTimeStyle" />
 
     </androidx.cardview.widget.CardView>
