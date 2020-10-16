@@ -42,11 +42,12 @@ object DummyDataClass {
             "Scale image into ImageView, then resize ImageView to match the image The question: How to ... When"
         )
         val timeList = listOf("1:30 pm", "2:45 pm", "8:20 am", "6:30 pm")
+        val type = listOf(1, 2, 1, 2)
 
         val dummyData = ArrayList<UserMessageEntity>()
         var i = 0
         while (i < messageList.size) {
-            val temp = UserMessageEntity(messageList[i], timeList[i])
+            val temp = UserMessageEntity(type[i], messageList[i], timeList[i])
             dummyData.add(temp)
             i += 1
         }

@@ -7,8 +7,8 @@
 
     <ImageView
         android:id="@+id/ivArrowBack"
-        android:layout_width="32dp"
-        android:layout_height="32dp"
+        android:layout_width="@dimen/iconsSize"
+        android:layout_height="@dimen/iconsSize"
         android:src="@drawable/arrow_back"
         android:background="@color/darkGreen"
         app:layout_constraintStart_toStartOf="parent"
@@ -18,8 +18,8 @@
 
     <de.hdodenhof.circleimageview.CircleImageView
         android:id="@+id/ivDpBack"
-        android:layout_width="32dp"
-        android:layout_height="32dp"
+        android:layout_width="@dimen/iconsSize"
+        android:layout_height="@dimen/iconsSize"
         android:src="@drawable/placeholder"
         android:background="@color/darkGreen"
         app:layout_constraintTop_toTopOf="parent"

@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_height="wrap_content"
+    android:layout_width="match_parent"
+    style="@style/RippleEffectStyle">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <ImageView
+            android:id="@+id/ivBlockIcon"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:background="@color/white"
+            android:src="@drawable/block"
+            android:paddingStart="@dimen/morePadding"
+            android:paddingBottom="@dimen/morePadding"
+            android:paddingTop="@dimen/morePadding"
+            android:paddingEnd="@dimen/padding"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"/>
+
+        <TextView
+            android:id="@+id/tvBlock"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="wrap_content"
+            android:text="@string/block"
+            android:textColor="@color/red"
+            android:background="@color/white"
+            android:textSize="@dimen/bigText"
+            android:paddingStart="@dimen/morePadding"
+            android:paddingBottom="@dimen/morePadding"
+            android:paddingTop="@dimen/morePadding"
+            android:paddingEnd="@dimen/padding"
+            app:layout_constraintStart_toEndOf="@+id/ivBlockIcon"
+            app:layout_constraintTop_toTopOf="parent"/>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+</androidx.cardview.widget.CardView>

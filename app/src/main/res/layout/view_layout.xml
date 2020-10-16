@@ -11,12 +11,11 @@
 
     <de.hdodenhof.circleimageview.CircleImageView
         android:id="@+id/civDisplayPicture"
-        android:layout_width="52dp"
-        android:layout_height="52dp"
+        android:layout_width="@dimen/imageViewSize"
+        android:layout_height="@dimen/imageViewSize"
         android:layout_marginStart="16dp"
-        android:layout_marginEnd="16dp"
-        android:layout_marginTop="8dp"
-        android:layout_marginBottom="8dp"
+        android:layout_marginTop="@dimen/margin"
+        android:layout_marginBottom="@dimen/margin"
         android:src="@drawable/placeholder"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -27,23 +26,23 @@
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:textColor="@color/black"
-        android:textSize="16sp"
-        android:layout_marginTop="8dp"
-        android:layout_marginStart="16dp"
-        android:layout_marginEnd="16dp"
+        android:textSize="@dimen/mediumText"
+        android:layout_marginTop="@dimen/margin"
+        android:layout_marginStart="@dimen/largeMargin"
+        android:layout_marginEnd="@dimen/margin"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toEndOf="@+id/displayPicture"/>
+        app:layout_constraintStart_toEndOf="@+id/civDisplayPicture"/>
 
     <TextView
         android:id="@+id/tvLatestMessage"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:layout_marginStart="16dp"
-        android:layout_marginTop="4dp"
-        android:layout_marginEnd="16dp"
+        android:layout_marginStart="@dimen/largeMargin"
+        android:layout_marginTop="@dimen/lessMargin"
+        android:layout_marginEnd="@dimen/margin"
         android:ellipsize="end"
-        app:layout_constraintStart_toEndOf="@+id/displayPicture"
+        app:layout_constraintStart_toEndOf="@+id/civDisplayPicture"
         app:layout_constraintTop_toBottomOf="@+id/tvUserName"
         app:layout_constraintEnd_toEndOf="parent"
         android:singleLine="true" />
@@ -51,12 +50,12 @@
     <View
         android:id="@+id/seperatorLine"
         android:layout_width="0dp"
-        android:layout_height="1dp"
-        android:layout_marginTop="8dp"
+        android:layout_height="@dimen/lineHeight"
         android:background="#B4C1B6"
+        android:layout_marginTop="@dimen/margin"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="@id/tvLatestMessage"
         app:layout_constraintStart_toStartOf="@+id/tvLatestMessage"
-        app:layout_constraintTop_toBottomOf="@+id/displayPicture" />
+        app:layout_constraintTop_toBottomOf="@+id/civDisplayPicture" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

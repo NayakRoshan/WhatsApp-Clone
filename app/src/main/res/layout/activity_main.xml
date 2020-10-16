@@ -29,6 +29,7 @@
             android:layout_height="wrap_content"
             app:tabIndicatorColor="@color/white"
             app:tabSelectedTextColor="@color/white"
+            app:tabTextColor="@color/textColor"
             android:background="@color/darkGreen"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
@@ -56,7 +57,7 @@
     <androidx.viewpager.widget.ViewPager
         android:id="@+id/vpFragmentHolder"
         android:layout_width="match_parent"
-        android:layout_height="0dp"
+        android:layout_height="@dimen/adjustLayout"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/abMainBar"
@@ -69,16 +70,18 @@
         app:fabSize="mini"
         app:backgroundTint="@color/white"
         android:visibility="invisible"
-        android:layout_margin="24dp"
         android:alpha="0.5"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"/>
+        app:layout_constraintBottom_toBottomOf="@id/fabNormal"
+        app:layout_constraintEnd_toEndOf="@id/fabNormal"
+        app:layout_constraintStart_toStartOf="@id/fabNormal"
+        app:layout_constraintTop_toTopOf="@id/fabNormal"/>
 
     <com.google.android.material.floatingactionbutton.FloatingActionButton
         android:id="@+id/fabNormal"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_margin="16dp"
+        app:backgroundTint="@color/lightGreen"
         android:src="@drawable/message_white"
         app:tint="@color/white"
         app:fabSize="normal"

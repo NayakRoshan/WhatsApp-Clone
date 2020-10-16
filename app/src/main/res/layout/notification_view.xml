@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_height="wrap_content"
+    android:layout_width="match_parent">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <com.google.android.material.switchmaterial.SwitchMaterial
+            android:id="@+id/muteNotifications"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/mute_notifications"
+            android:textSize="@dimen/bigText"
+            android:textColor="@color/black"
+            android:paddingStart="@dimen/morePadding"
+            android:paddingEnd="@dimen/morePadding"
+            android:paddingTop="@dimen/morePadding"
+            style="@style/RippleEffectStyle"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"/>
+
+        <TextView
+            android:id="@+id/customNotifications"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/custom_notifications"
+            android:textSize="@dimen/bigText"
+            android:textColor="@color/black"
+            android:paddingStart="@dimen/morePadding"
+            android:paddingEnd="@dimen/morePadding"
+            android:paddingTop="@dimen/morePadding"
+            style="@style/RippleEffectStyle"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/muteNotifications"/>
+
+        <TextView
+            android:id="@+id/mediaVisibility"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/media_visibility"
+            android:textSize="@dimen/bigText"
+            android:textColor="@color/black"
+            android:paddingStart="@dimen/morePadding"
+            android:paddingEnd="@dimen/morePadding"
+            android:paddingTop="@dimen/morePadding"
+            android:paddingBottom="@dimen/morePadding"
+            style="@style/RippleEffectStyle"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/customNotifications"/>
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</androidx.cardview.widget.CardView>

@@ -10,7 +10,7 @@
     <style name="MainTheme" parent="Theme.MaterialComponents.DayNight.DarkActionBar">
         <item name="colorPrimary">@color/darkGreen</item>
         <item name="colorPrimaryDark">@color/darkestGreen</item>
-        <item name="colorAccent">@color/lightGreen</item>
+        <item name="colorAccent">@color/darkGreen</item>
         <item name="elevation">0dp</item>
         <item name="layout_scrollFlags">scroll|exitUntilCollapsed</item>
         <item name="android:textColorSecondary">@color/white</item>
@@ -20,7 +20,7 @@
         <item name="colorPrimary">@color/darkGreen</item>
         <item name="colorPrimaryDark">@color/darkestGreen</item>
         <item name="colorAccent">@color/lightGreen</item>
-        <item name="elevation">0dp</item>
+        <item name="android:textColorPrimary">@color/textColor</item>
         <item name="android:textColorSecondary">@color/white</item>
     </style>
 
@@ -47,30 +47,42 @@
         <item name="android:layout_height">wrap_content</item>
         <item name="android:layout_gravity">end|bottom</item>
         <item name="android:padding">4dp</item>
-        <item name="android:textSize">12sp</item>
+        <item name="android:textSize">@dimen/smallText</item>
     </style>
 
     <style name="MessageTextStyle">
         <item name="android:layout_width">match_parent</item>
         <item name="android:layout_height">wrap_content</item>
-        <item name="android:padding">8dp</item>
+        <item name="android:padding">@dimen/padding</item>
         <item name="android:textColor">@color/black</item>
-        <item name="android:textSize">15sp</item>
+        <item name="android:textSize">@dimen/mediumText</item>
     </style>
 
     <style name="DialogIconsStyle">
         <item name="android:layout_width">0dp</item>
-        <item name="android:layout_height">50dp</item>
-        <item name="android:padding">8dp</item>
+        <item name="android:layout_height">@dimen/imageViewSize</item>
+        <item name="android:padding">@dimen/padding</item>
         <item name="background">?android:attr/selectableItemBackground</item>
         <item name="android:clickable">true</item>
         <item name="android:focusable">true</item>
     </style>
 
-    <style name="ProfileImageIconsStyle">
+    <style name="ProfileImageIconsStyle" parent="RippleEffectStyle">
         <item name="android:layout_width">wrap_content</item>
         <item name="android:layout_height">match_parent</item>
         <item name="android:layout_gravity">center</item>
-        <item name="android:padding">16dp</item>
+        <item name="android:padding">@dimen/morePadding</item>
+    </style>
+
+    <style name="ExpandedAppBar" parent="@android:style/TextAppearance">
+        <item name="android:textSize">30sp</item>
+        <item name="android:textColor">@android:color/white</item>
+        <item name="android:textStyle">bold</item>
+    </style>
+
+    <style name="CollapsedAppBar" parent="@android:style/TextAppearance">
+        <item name="android:textSize">@dimen/bigText</item>
+        <item name="android:textColor">@android:color/white</item>
+        <item name="android:textStyle">bold</item>
     </style>
 </resources>

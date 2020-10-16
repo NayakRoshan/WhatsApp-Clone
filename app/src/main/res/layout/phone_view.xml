@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_height="wrap_content"
+    android:layout_width="match_parent">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <include
+            android:id="@+id/viewPhoneNumber"
+            layout="@layout/phone_number_view"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintEnd_toStartOf="@+id/ivMessage"
+            app:layout_constraintBottom_toBottomOf="parent"/>
+
+        <ImageView
+            android:id="@+id/ivMessage"
+            android:layout_height="0dp"
+            android:layout_width="wrap_content"
+            style="@style/ProfileImageIconsStyle"
+            android:src="@drawable/message"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toStartOf="@+id/ivPhoneCall"/>
+
+        <ImageView
+            android:id="@+id/ivPhoneCall"
+            android:layout_height="0dp"
+            android:layout_width="wrap_content"
+            style="@style/ProfileImageIconsStyle"
+            android:src="@drawable/phone"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toStartOf="@+id/ivVideoCall"/>
+
+        <ImageView
+            android:id="@+id/ivVideoCall"
+            android:layout_height="0dp"
+            android:layout_width="wrap_content"
+            style="@style/ProfileImageIconsStyle"
+            android:src="@drawable/video_call"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"/>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</androidx.cardview.widget.CardView>

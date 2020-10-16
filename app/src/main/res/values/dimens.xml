@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="adjustLayout">0dp</dimen>
+    <dimen name="iconsSize">25dp</dimen>
+    <dimen name="speakerIconSize">40dp</dimen>
+    <dimen name="imageViewSize">52dp</dimen>
+    <dimen name="cardCornerRadius">30dp</dimen>
+    <dimen name="margin">8dp</dimen>
+    <dimen name="largeMargin">12dp</dimen>
+    <dimen name="lessMargin">4dp</dimen>
+    <dimen name="bigText">18sp</dimen>
+    <dimen name="mediumText">15sp</dimen>
+    <dimen name="smallText">12sp</dimen>
+    <dimen name="padding">8dp</dimen>
+    <dimen name="morePadding">16dp</dimen>
+    <dimen name="lessPadding">4dp</dimen>
+    <dimen name="lineHeight">1dp</dimen>
+    <dimen name="dialogDpWidth">250dp</dimen>
+    <dimen name="smallImageSize">20dp</dimen>
+    <dimen name="sharedSocSize">80dp</dimen>
+</resources>

@@ -7,7 +7,7 @@
 
     <ImageView
         android:id="@+id/ivDp"
-        android:layout_width="250dp"
+        android:layout_width="@dimen/dialogDpWidth"
         android:layout_height="0dp"
         android:src="@drawable/placeholder"
         app:layout_constraintTop_toTopOf="parent"

@@ -10,10 +10,10 @@
 
     <de.hdodenhof.circleimageview.CircleImageView
         android:id="@+id/civCallerDp"
-        android:layout_width="52dp"
-        android:layout_height="52dp"
+        android:layout_width="@dimen/imageViewSize"
+        android:layout_height="@dimen/imageViewSize"
         android:src="@drawable/placeholder"
-        android:layout_margin="8dp"
+        android:layout_margin="@dimen/margin"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"/>
@@ -23,9 +23,9 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="@string/name_caller"
-        android:textSize="15sp"
+        android:textSize="@dimen/mediumText"
         android:textColor="@color/black"
-        android:layout_margin="8dp"
+        android:layout_margin="@dimen/margin"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintStart_toEndOf="@+id/civCallerDp"/>
 
@@ -34,7 +34,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:src="@drawable/call_received"
-        android:layout_marginStart="8dp"
+        android:layout_marginStart="@dimen/margin"
         app:layout_constraintTop_toBottomOf="@+id/tvName"
         app:layout_constraintStart_toEndOf="@+id/civCallerDp"/>
 
@@ -52,7 +52,8 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:src="@drawable/phone"
-        android:layout_marginEnd="16dp"
+        android:layout_marginEnd="@dimen/margin"
+        android:padding="@dimen/padding"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintTop_toTopOf="parent"/>
@@ -60,11 +61,10 @@
     <View
         android:id="@+id/line"
         android:layout_width="0dp"
-        android:layout_height="1dp"
-        android:background="#20000000"
-        android:layout_marginStart="8dp"
-        android:layout_marginTop="12dp"
-        android:layout_marginEnd="8dp"
+        android:layout_height="@dimen/lineHeight"
+        android:background="@color/dull_black"
+        android:layout_marginStart="@dimen/margin"
+        android:layout_marginEnd="@dimen/margin"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toEndOf="@+id/civCallerDp"/>

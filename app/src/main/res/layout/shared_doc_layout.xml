@@ -8,8 +8,8 @@
 
     <ImageView
         android:id="@+id/ivSharedImage"
-        android:layout_width="80dp"
-        android:layout_height="80dp"
+        android:layout_width="@dimen/sharedSocSize"
+        android:layout_height="@dimen/sharedSocSize"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintEnd_toEndOf="parent"

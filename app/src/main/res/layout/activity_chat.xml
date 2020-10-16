@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:fitsSystemWindows="true"
-    android:background="#20000000"
+    android:background="@color/chat_background"
     tools:context=".ui.ChatActivity">
 
     <com.google.android.material.appbar.AppBarLayout
@@ -35,8 +35,9 @@
                 android:maxLines="1"
                 android:ellipsize="end"
                 android:padding="12dp"
-                android:textSize="20sp"
+                android:textSize="@dimen/bigText"
                 android:textColor="@color/white"
+                android:textStyle="bold"
                 android:background="?android:attr/selectableItemBackground"
                 android:clickable="true"
                 android:focusable="true"/>
@@ -49,7 +50,7 @@
         android:id="@+id/rvMessageList"
         android:layout_width="match_parent"
         android:layout_height="0dp"
-        android:layout_margin="8dp"
+        android:layout_margin="@dimen/margin"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/abChatAct"
         app:layout_constraintEnd_toEndOf="parent"
@@ -59,8 +60,8 @@
     android:id="@+id/cvUserInputLayout"
     android:layout_width="0dp"
     android:layout_height="wrap_content"
-    app:cardCornerRadius="40dp"
-    android:layout_margin="8dp"
+    app:cardCornerRadius="@dimen/cardCornerRadius"
+    android:layout_margin="@dimen/margin"
         android:clipChildren="false"
         android:clipToPadding="false"
     app:layout_constraintEnd_toStartOf="@id/civMicImage"
@@ -75,10 +76,10 @@
         android:clipToPadding="false">
 
         <ImageView
-            android:layout_width="40dp"
-            android:layout_height="40dp"
+            android:layout_width="@dimen/iconsSize"
+            android:layout_height="@dimen/iconsSize"
             android:src="@drawable/smiley"
-            android:layout_margin="8dp"/>
+            android:layout_margin="@dimen/margin"/>
 
         <EditText
             android:id="@+id/etEnterMessage"
@@ -92,17 +93,19 @@
 
         <ImageView
             android:id="@+id/ivSelectImage"
-            android:layout_width="40dp"
-            android:layout_height="40dp"
+            android:layout_width="@dimen/iconsSize"
+            android:layout_height="@dimen/iconsSize"
             android:src="@drawable/image"
-            android:layout_margin="8dp"/>
+            android:layout_margin="@dimen/margin"
+            android:layout_gravity="center"/>
 
         <ImageView
             android:id="@+id/ivClickImage"
-            android:layout_width="40dp"
-            android:layout_height="40dp"
+            android:layout_width="@dimen/iconsSize"
+            android:layout_height="@dimen/iconsSize"
             android:src="@drawable/ic_baseline_camera_alt_24"
-            android:layout_margin="8dp" />
+            android:layout_margin="@dimen/margin"
+            android:layout_gravity="center"/>
 
     </LinearLayout>
 
@@ -110,15 +113,16 @@
 
     <de.hdodenhof.circleimageview.CircleImageView
     android:id="@+id/civMicImage"
-    android:layout_width="50dp"
-    android:layout_height="50dp"
-    android:layout_margin="8dp"
-    android:padding="8dp"
+    android:layout_width="@dimen/speakerIconSize"
+    android:layout_height="@dimen/speakerIconSize"
+    android:layout_margin="@dimen/margin"
     android:src="@drawable/mic"
+        android:padding="8dp"
     android:background="@drawable/circular_image"
     app:layout_constraintHorizontal_chainStyle="packed"
     app:layout_constraintEnd_toEndOf="parent"
     app:layout_constraintStart_toEndOf="@+id/cvUserInputLayout"
-    app:layout_constraintBottom_toBottomOf="parent"/>
+        app:layout_constraintTop_toTopOf="@id/cvUserInputLayout"
+    app:layout_constraintBottom_toBottomOf="@id/cvUserInputLayout"/>
 
 </androidx.constraintlayout.widget.ConstraintLayout>
