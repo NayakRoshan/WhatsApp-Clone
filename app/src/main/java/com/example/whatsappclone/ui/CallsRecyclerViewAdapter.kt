@@ -11,7 +11,6 @@ import androidx.recyclerview.widget.RecyclerView
 import com.example.whatsappclone.R
 import com.example.whatsappclone.entity.CallDetailsEntity
 import kotlinx.android.synthetic.main.call_view_layout.view.*
-import kotlinx.android.synthetic.main.message_layout.view.*
 
 class CallsRecyclerViewAdapter(
     private val context : Context,

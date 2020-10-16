@@ -6,7 +6,6 @@ import android.view.View
 import androidx.core.content.res.ResourcesCompat
 import androidx.fragment.app.DialogFragment
 import com.example.whatsappclone.R
-import com.example.whatsappclone.entity.MyChatDetailsEntity
 import com.google.android.material.dialog.MaterialAlertDialogBuilder
 import kotlinx.android.synthetic.main.display_picture_click_layout.*
 
