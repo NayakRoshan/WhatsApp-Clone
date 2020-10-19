@@ -4,6 +4,7 @@ import android.animation.Animator
 import android.animation.ObjectAnimator
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.util.Log
 import android.view.View
 import androidx.core.content.ContextCompat
 import androidx.fragment.app.Fragment
@@ -11,10 +12,11 @@ import androidx.viewpager.widget.ViewPager
 import com.example.whatsappclone.R
 import kotlinx.android.synthetic.main.activity_main.*
 
-class MainScreen : AppCompatActivity() {
+class MainActivity : AppCompatActivity() {
 
     private var previousPage : Int = 0
     private var TRANSLATED_Y : Float? = null
+    private val FAB_MARGIN = 10
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -24,7 +26,7 @@ class MainScreen : AppCompatActivity() {
 
     override fun onStart() {
         super.onStart()
-        TRANSLATED_Y = 100f
+        Log.d("Height", "fab height = ${fabNormal.height}")
     }
 
     private fun setUpAdapterAndTabLayout() {
@@ -53,6 +55,9 @@ class MainScreen : AppCompatActivity() {
         ) {}
 
         override fun onPageSelected(position: Int) {
+            Log.d("Height", "fab height = ${fabNormal.height}")
+            TRANSLATED_Y = fabNormal.height.toFloat() + FAB_MARGIN.toFloat()
+
             if (previousPage == 0) {
                 fabMini.visibility = View.VISIBLE
                 when (position) {

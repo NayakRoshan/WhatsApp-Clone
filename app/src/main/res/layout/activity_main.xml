@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".ui.MainScreen">
+    tools:context=".ui.MainActivity">
 
     <com.google.android.material.appbar.AppBarLayout
         android:id="@+id/abMainBar"
@@ -70,7 +70,7 @@
         app:fabSize="mini"
         app:backgroundTint="@color/white"
         android:visibility="invisible"
-        android:alpha="0.5"
+        android:alpha="0.8"
         app:layout_constraintBottom_toBottomOf="@id/fabNormal"
         app:layout_constraintEnd_toEndOf="@id/fabNormal"
         app:layout_constraintStart_toStartOf="@id/fabNormal"

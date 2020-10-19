@@ -8,7 +8,7 @@
     <dimen name="margin">8dp</dimen>
     <dimen name="largeMargin">12dp</dimen>
     <dimen name="lessMargin">4dp</dimen>
-    <dimen name="bigText">18sp</dimen>
+    <dimen name="bigText">17sp</dimen>
     <dimen name="mediumText">15sp</dimen>
     <dimen name="smallText">12sp</dimen>
     <dimen name="padding">8dp</dimen>
@@ -17,5 +17,5 @@
     <dimen name="lineHeight">1dp</dimen>
     <dimen name="dialogDpWidth">250dp</dimen>
     <dimen name="smallImageSize">20dp</dimen>
-    <dimen name="sharedSocSize">80dp</dimen>
+    <dimen name="sharedDocSize">60dp</dimen>
 </resources>

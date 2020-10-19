@@ -16,7 +16,7 @@
             android:name=".ui.ChatActivity"
             android:theme="@style/NoActionBarMainTheme"
             android:windowSoftInputMode="stateVisible|adjustResize"/>
-        <activity android:name=".ui.MainScreen"
+        <activity android:name=".ui.MainActivity"
             android:theme="@style/NoActionBarMainTheme">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />

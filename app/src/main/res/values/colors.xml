@@ -1,9 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
+<!--#013220-->
 <resources>
     <color name="colorPrimary">#6200EE</color>
     <color name="colorPrimaryDark">#3700B3</color>
     <color name="colorAccent">#03DAC5</color>
-    <color name="darkestGreen">#013220</color>
+    <color name="darkestGreen">#063933</color>
     <color name="darkGreen">#075E54</color>
     <color name="lightGreen">#25D366</color>
     <color name="iconColor">#128C7E</color>
@@ -17,4 +18,5 @@
     <color name="collapsed_toolbar_color">#767F3A</color>
     <color name="red">#FF0000</color>
     <color name="chat_background">#20000000</color>
+    <color name="seperatorLineColor">#B4C1B6</color>
 </resources>

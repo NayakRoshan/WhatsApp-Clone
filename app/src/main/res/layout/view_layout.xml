@@ -51,7 +51,7 @@
         android:id="@+id/seperatorLine"
         android:layout_width="0dp"
         android:layout_height="@dimen/lineHeight"
-        android:background="#B4C1B6"
+        android:background="@color/seperatorLineColor"
         android:layout_marginTop="@dimen/margin"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="@id/tvLatestMessage"
