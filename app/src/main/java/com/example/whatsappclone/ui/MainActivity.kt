@@ -24,11 +24,6 @@ class MainActivity : AppCompatActivity() {
         setUpAdapterAndTabLayout()
     }
 
-    override fun onStart() {
-        super.onStart()
-        Log.d("Height", "fab height = ${fabNormal.height}")
-    }
-
     private fun setUpAdapterAndTabLayout() {
         val fragmentList : ArrayList<Fragment> = ArrayList()
         val pageTitles : ArrayList<String> = ArrayList()
@@ -55,7 +50,6 @@ class MainActivity : AppCompatActivity() {
         ) {}
 
         override fun onPageSelected(position: Int) {
-            Log.d("Height", "fab height = ${fabNormal.height}")
             TRANSLATED_Y = fabNormal.height.toFloat() + FAB_MARGIN.toFloat()
 
             if (previousPage == 0) {
